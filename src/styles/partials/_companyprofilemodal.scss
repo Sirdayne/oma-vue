@@ -1,0 +1,54 @@
+
+.mct .company-profile-modal {
+
+  &__title {
+    line-height: 51px;
+  }
+
+  &__text {
+    @include Body-p-Large;
+  }
+
+  &__subscription {
+    @include Body-p-default;
+    margin-top: 24px;
+    padding: 16px;
+    box-sizing: border-box;
+    background: $ot-cloud;
+  }
+
+  &__confirm {
+    width: 205px;
+  }
+
+  &__cancel {
+    width: 149px;
+  }
+
+  &__full {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width : 480px) {
+
+  .mct .company-profile-modal {
+
+    &__title {
+      line-height: 35px;
+    }
+
+    &__subscription {
+      margin-top: 12px;
+    }
+
+    &__confirm {
+      width: 100%;
+    }
+
+    &__cancel {
+      width: 100%;
+    }
+  }
+}

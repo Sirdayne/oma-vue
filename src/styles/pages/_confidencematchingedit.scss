@@ -1,0 +1,193 @@
+
+.mct .confidence-matching-edit {
+
+  &-spinner {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 280px;
+    width: 100%;
+    height: calc(100% - 280px);
+    opacity: 0.8;
+    background: #fff;
+    z-index: 10;
+  }
+
+  &__title {
+    @include Level-2-Left;
+  }
+
+  &__heading {
+    @include Level-2-Left;
+    margin: 16px 0 24px;
+  }
+
+  &__sub-heading {
+    @include Body-p-default;
+    margin: 0 0 11px 0;
+  }
+
+  &__empty {
+    height: 58px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-box {
+    width: 635px;
+
+    &__company {
+      padding: 40px 48px 56px;
+      border: solid 1px #b4bec5;
+      margin-bottom: 24px;
+
+      &__title {
+        @include Level-1-Left;
+        margin-bottom: 18px;
+      }
+
+      &__text {
+        @include Body-p-default;
+      }
+    }
+
+    &__pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .v-btn.v-btn {
+        width: 255px;
+      }
+
+      &__page {
+        @include Level-3-center;
+      }
+    }
+  }
+
+  &-form {
+    width: calc(100% - 665px);
+    margin-left: 30px;
+    padding: 40px 48px 56px;
+    background: #eee;
+    box-sizing: border-box;
+
+    &__success {
+      padding: 40px 48px 37px;
+      height: max-content;
+
+      &__title {
+        @include Level-2-Left-Bright;
+        margin-bottom: 8px;
+      }
+
+      &__text {
+        @include Body-p-default;
+      }
+    }
+
+    &__text {
+      @include Body-p-light;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.mct-form {
+
+  .mct-input {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      color: $ot-navy;
+      margin-bottom: 8px;
+
+      .v-icon {
+        font-size: 16px;
+        color: $new-ot-blue;
+        margin-left: 4px;
+        margin-bottom: 2px;
+      }
+    }
+
+    input[type="text"] {
+      height: 49px;
+      width: 100%;
+      border: solid 1px #7e929f;
+      border-radius: 2px;
+      background-color: $white;
+      font-size: 14px;
+      color: $ot-navy;
+      padding: 16px;
+    }
+  }
+}
+
+@media screen and (max-width : 1200px) {
+
+  .mct .confidence-matching-edit {
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &-box, &-form {
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+}
+
+@media screen and (max-width : 650px) {
+
+  .mct .confidence-matching-edit {
+
+    &__heading {
+      font-size: 22px;
+    }
+
+    &-form {
+      padding: 20px;
+
+      &__success {
+
+        &__title {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &-box {
+
+      &__company {
+        padding: 20px;
+
+        &__title {
+          font-size: 20px;
+        }
+      }
+
+      &__pagination {
+        flex-direction: column;
+
+        &__page {
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+}
+

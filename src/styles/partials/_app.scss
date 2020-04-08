@@ -1,0 +1,20 @@
+
+.mct .app {
+  &__mobile-nav {
+    @include up-to(960px) {
+      display: flex;
+    }
+
+    &__item {
+      @include up-to(960px) {
+        width: 50%;
+      }
+
+      &:not(:last-child) {
+        @include up-to(960px) {
+          border-right: 1px solid transparentize($ot-steel, 0.5);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+
+/* variables */
+@import 'abstracts/variables';
+
+/* mixins */
+@import 'abstracts/mixins';
+
+/* vendor */
+@import 'vendor/vuetify-custom';
+
+/* global */
+@import 'base/animations';
+@import 'base/common';
+
+/* partials */
+@import 'partials/app';
+@import 'partials/checklist';
+@import 'partials/companyprofileblurred';
+@import 'partials/companyprofilemodal';
+@import 'partials/compliancelinking';
+@import 'partials/compliancetotalsitem';
+@import 'partials/content';
+@import 'partials/customtooltip';
+@import 'partials/expansion';
+@import 'partials/footer';
+@import 'partials/header';
+@import 'partials/mastercardbanner';
+@import 'partials/modal';
+@import 'partials/navigation';
+@import 'partials/notification';
+@import 'partials/search';
+@import 'partials/sectiondivider';
+@import 'partials/table';
+@import 'partials/tabs';
+@import 'partials/traceid';
+@import 'partials/vb';
+
+
+/* pages */
+@import 'pages/brieftc';
+@import 'pages/companyprofile';
+@import 'pages/compliancedetails';
+@import 'pages/confidencematching';
+@import 'pages/confidencematchingedit';
+@import 'pages/dashboard';
+@import 'pages/findmatch';
+@import 'pages/genericerror';
+@import 'pages/home';
+@import 'pages/likelymatch';
+@import 'pages/linkedentities';
+@import 'pages/managesubscription';
+@import 'pages/manageyourfile';
+@import 'pages/onboarding';
+@import 'pages/orgregistration';
+@import 'pages/pricing';
+@import 'pages/settings';
+@import 'pages/uploadmasterlist';

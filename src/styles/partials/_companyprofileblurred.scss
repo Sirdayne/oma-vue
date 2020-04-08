@@ -1,0 +1,35 @@
+
+.mct .company-profile-blurred {
+
+  &__image {
+    width: 100%;
+  }
+
+  &-caption {
+    margin-top: 100px;
+    min-height: 325px;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: $ot-steel-dark;
+    font: {
+      size: 24px;
+      weight: 300;
+    }
+
+    .link {
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width : 480px) {
+  .mct .company-profile-blurred {
+
+    &-caption {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  }
+}
+

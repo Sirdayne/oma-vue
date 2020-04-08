@@ -1,0 +1,22 @@
+
+.mct .compliance-totals-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10.5px 0 9.5px;
+  border-bottom: 2px solid #eee;
+  box-sizing: border-box;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__number {
+    @include Level-3-Left;
+    margin-right: 16px;
+  }
+
+  &__text {
+    @include Body-p-light;
+  }
+}

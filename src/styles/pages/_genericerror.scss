@@ -1,0 +1,106 @@
+
+.mct .generic-error {
+  text-align: center;
+
+  &__img {
+    margin-top: 71px;
+    width: 126px;
+    height: 127px;
+
+    &__sign-out {
+      margin-top: 160px;
+      width: 89px;
+      height: 110px;
+    }
+
+    &__no-search {
+      margin-top: 120px;
+      width: 70px;
+      height: 112px;
+    }
+
+    &__org {
+      margin-top: 144px;
+    }
+  }
+
+  &__icon {
+    margin-top: 151px;
+
+    .v-icon.v-icon {
+      font-size: 120px;
+      width: 120px;
+      height: 120px;
+      color: $ot-purple;
+    }
+  }
+
+  &__title {
+    @include Level-1-Left-Bright;
+    margin-top: 32px;
+  }
+
+  &__text {
+    @include Body-p-Large;
+    margin: 8px 0 0;
+  }
+
+  &__btns {
+    margin-top: 48px;
+
+    .v-btn.v-btn {
+      padding: 0 31px;
+      height: 41px;
+      box-shadow: none;
+    }
+  }
+
+}
+
+@media screen and (max-width : 600px) {
+
+  .mct .generic-error {
+    padding: 0 8px;
+
+    &__img {
+      margin-top: 40px;
+      width: 76px;
+      height: 77px;
+    }
+
+    &__title {
+      font-size: 32px;
+      line-height: 36px;
+      margin-top: 16px;
+    }
+
+    &__text {
+      margin-top: 13px;
+
+      br {
+        display: none;
+      }
+    }
+
+    &__btns {
+      margin-top: 44px;
+
+      .v-btn.v-btn {
+        padding: 0 31px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width : 480px) {
+
+  .mct .generic-error {
+
+    &__btns {
+
+      .v-btn.v-btn{
+        width: 100%;
+      }
+    }
+  }
+}

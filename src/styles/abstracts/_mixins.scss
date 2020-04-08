@@ -1,0 +1,191 @@
+
+/* text */
+@mixin Level-1-Left {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  color: $ot-navy;
+}
+
+@mixin Level-1-Left-Bright {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  color: $new-ot-blue;
+}
+
+@mixin Level-2-Left {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: $ot-navy;
+}
+
+@mixin Level-2-Left-Bright {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: $new-ot-blue;
+}
+
+@mixin Body-p-Large {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: $ot-navy;
+  line-height: normal;
+}
+
+@mixin Level-3-Left {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: $new-ot-blue;
+}
+
+@mixin Level-3-Left-Light {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: $ot-steel-dark;
+}
+
+@mixin Mobile-Level-1-Left-Bright {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1.06;
+  letter-spacing: -0.5px;
+  color: $new-ot-blue;
+}
+
+@mixin Level-3-Left-Dark-Bold {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: $ot-navy;
+}
+
+@mixin Level-3-center {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: $new-ot-blue;
+  text-align: center;
+}
+
+@mixin Body-p-inverse-bold {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: $white;
+}
+
+@mixin Body-Default-Link {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: $new-ot-blue;
+}
+
+@mixin Body-p-default {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: $ot-navy;
+}
+
+@mixin Body-p-default-bold {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: $ot-navy;
+}
+
+@mixin Body-p-light {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: $ot-steel-dark;
+}
+
+@mixin Level-X-Capped {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: $ot-steel;
+}
+
+@mixin Level-X-Left {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: $ot-indigo;
+}
+
+@mixin Body-p-small {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: $ot-navy;
+}
+
+@mixin Body-p-small-light {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: $ot-steel-dark;
+}
+
+@mixin Body-small-link {
+  font-family: aktiv-grotesk, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: $new-ot-blue;
+}
+
+@mixin Mono-Left {
+  font-family: roboto-mono;
+  font-size: 16px;
+  color: $ot-steel-dark;
+}
+/* /text */
+
+/* layout */
+@mixin container {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: $base-content-width;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $base-content-width + 32px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @media only screen and (max-width: 959px) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+/* /layout */
+
+/* images */
+/* mixin for 2x retina backgrounds */
+@mixin image-2x($image, $width, $height) {
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min--moz-device-pixel-ratio: 2),
+         (-o-min-device-pixel-ratio: 2/1),
+         (min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi),
+         (min-resolution: 2dppx) {
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+/* /images */
+
+/* responsiveness */
+@mixin up-to($width) {
+  @media only screen and (max-width: $width - 1) {
+    @content;
+  }
+}
+/* /responsiveness */

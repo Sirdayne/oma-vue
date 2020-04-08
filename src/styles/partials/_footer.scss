@@ -1,0 +1,41 @@
+
+$footer-height: 106px;
+
+.footer {
+  &.theme--light.v-sheet {
+    background-color: $new-ot-blue;
+    width: 100%;
+
+    &:hover {
+      background-color: #4962f3;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: $base-content-width;
+    margin: 0 auto;
+    height: $footer-height;
+    display: flex;
+    align-items: center;
+    font: {
+      size: 20px;
+      weight: 500;
+    }
+    color: $white;
+
+    @media only screen and (max-width: $base-content-width + 32px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  &-spacer {
+    height: $footer-height;
+  }
+
+  & .v-toolbar__content, .v-toolbar__extension {
+    padding: 0;
+  }
+}

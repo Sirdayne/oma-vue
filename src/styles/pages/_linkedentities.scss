@@ -1,0 +1,54 @@
+.mct .linked-entities {
+
+  &-container {
+    padding: 32px 32px 0px;
+    background: #fff;
+    margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .company-profile__row {
+      margin-bottom: 0px;
+    }
+
+    .company-profile-item {
+      margin-bottom: 32px;
+      width: 100%;
+    }
+
+    &-empty {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 17px 45px;
+      box-sizing: border-box;
+
+      &__text {
+        margin-left: 16px;
+        @include Level-3-Left-Light
+      }
+
+      .v-icon.v-icon {
+        width: 24px;
+        height: 26px;
+        font-size: 24px;
+        color: $ot-steel-dark;
+      }
+    }
+  }
+}
+
+@media screen and (max-width : 600px) {
+
+  .mct .linked-entities {
+
+    &-container {
+      padding: 20px;
+
+      &-empty {
+        padding: 0px;
+      }
+    }
+  }
+}

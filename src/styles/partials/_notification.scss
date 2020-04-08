@@ -1,0 +1,40 @@
+
+.notification {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  color: $white;
+  padding: 17px 24px;
+  margin: 8px 0;
+  @include Body-p-inverse-bold;
+
+  @include up-to(600px) {
+    margin: 0 -8px;
+    border-radius: 0;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+
+  &__icon {
+    padding-right: 18px;
+
+    @include up-to(600px) {
+      padding-right: 10px;
+    }
+  }
+
+  &__text {
+    flex-grow: 1;
+  }
+
+  &--alert {
+    background-color: $new-ot-blue;
+  }
+
+  &--error {
+    background-color: $new-ot-red;
+  }
+}

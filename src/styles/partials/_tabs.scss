@@ -1,0 +1,80 @@
+
+.mct {
+    & .v-tabs {
+      &-slider {
+        height: 4px;
+        background-color: $new-ot-blue;
+
+        &-wrapper {
+          // Vuetify use inline style for this, so... it's important :(
+          height: 4px !important;
+        }
+      }
+
+      & .v-tab {
+        font-size: 20px;
+        padding: 0;
+        text-transform: none;
+
+        &:not(:last-child) {
+          margin-right: 64px;
+        }
+
+        &:not(.v-tab--active) {
+          @include Level-3-Left;
+          font-weight: normal;
+        }
+
+        & &--active {
+          font-weight: 500;
+          color: $new-ot-blue;
+        }
+      }
+    }
+
+    & .v-tabs > .v-tabs-bar,
+      & .theme--light.v-tabs > .v-tabs-bar {
+      background-color: $page-background;
+
+      & .v-tab:not(.v-tab--active) {
+        color: $new-ot-blue;
+      }
+    }
+
+    & .v-window-item {
+      padding: 40px;
+      // temporary for testing (safe to remove)
+      @include Body-p-Large;
+    }
+}
+
+@media screen and (max-width : 720px) {
+
+  .mct {
+
+    & .v-window-item {
+      padding: 28px 24px;
+    }
+
+    & .v-tabs {
+
+      & .v-tab {
+        font-size: 14.5px;
+
+        &:not(.v-tab--active) {
+          font-size: 14.5px;
+        }
+
+        &:not(:last-child) {
+          margin-right: 39px;
+        }
+      }
+    }
+  }
+
+  .mct {
+    .v-application--is-ltr .v-tabs-bar.v-tabs-bar--is-mobile:not(.v-tabs-bar--show-arrows)>.v-slide-group__wrapper>.v-tabs-bar__content>.v-tab:first-child, .v-application--is-ltr .v-tabs-bar.v-tabs-bar--is-mobile:not(.v-tabs-bar--show-arrows)>.v-slide-group__wrapper>.v-tabs-bar__content>.v-tabs-slider-wrapper+.v-tab {
+      margin-left: 16px;
+    }
+  }
+}

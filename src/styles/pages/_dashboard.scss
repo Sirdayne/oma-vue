@@ -1,0 +1,306 @@
+
+.mct .dashboard {
+  margin-top: -8px;
+
+  // &.dashboard--first .v-window-item {
+  //   padding: 10px 0;
+  // }
+
+  &__header {
+    line-height: 1;
+
+    @include Level-1-Left;
+
+    @include up-to(600px) {
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 1.06;
+      letter-spacing: -0.5px;
+      color: $ot-navy;
+      margin-left: 16px;
+    }
+  }
+
+  &__monitored-count {
+    padding-top: 4px;
+    font-size: 16px;
+    color: $ot-navy;
+
+    &__value {
+      font-weight: bold;
+    }
+  }
+
+  &__blurred {
+    &-image {
+      &--desktop {
+        margin-left: -164px;
+
+        @include up-to(600px) {
+          display: none;
+        }
+      }
+
+      &--mobile {
+        display: none;
+        text-align: center;
+        width: 100%;
+
+        @include up-to(600px) {
+          display: block;
+        }
+      }
+    }
+
+    &-caption {
+      font: {
+        size: 24px;
+        weight: 300;
+      }
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: $ot-steel-dark;
+
+      @include up-to(600px) {
+        font: {
+          size: 18px;
+          weight: normal;
+        }
+      }
+
+      &--offset {
+        @include up-to(600px) {
+          margin-top: -40px;
+        }
+      }
+
+      .link {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__above-tiles {
+    .v-btn,
+    .v-btn:not(.v-btn--round).v-size--default {
+      height: 41px;
+    }
+
+    .v-btn.dashboard__above-tiles__download-button,
+    .v-btn:not(.v-btn--round).v-size--default.dashboard__above-tiles__download-button {
+      width: 233px;
+
+      @include up-to(960px) {
+        width: 100%;
+      }
+    }
+
+    &__link {
+      @include Body-Default-Link;
+      width: 233px;
+
+      @include up-to(960px) {
+        width: 100%;
+      }
+
+      text-align: center;
+      // @include up-to(600px) {
+      //   text-align: center;
+      // }
+
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__tile {
+    position: relative;
+    background-color: #ffffff;
+    width: 100%;
+
+    &--chart {
+      height: 440px;
+      padding: 16px 24px 28px 24px;
+
+      @include up-to(600px) {
+        height: auto;
+        padding-bottom: 18px;
+      }
+
+      .dashboard__tile__header {
+        font: {
+          size: 16px;
+          weight: bold;
+        }
+        line-height: normal;
+        letter-spacing: normal;
+        color: $ot-navy;
+      }
+    }
+
+    &--card {
+      position: relative;
+      min-height: 177px;
+      height: 100%;
+      padding: 35px 33px 43px 33px;
+
+      @include up-to(960px) {
+        padding: 16px 24px;
+      }
+
+      @include up-to(600px) {
+        height: auto;
+      }
+
+      .dashboard__tile__header-wrapper {
+        min-height: 78px;
+      }
+
+      .dashboard__tile__header {
+        height: auto;
+        @include Level-2-Left;
+      }
+
+      .dashboard__tile__status {
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 5px;
+        padding: 4.5px 8px;
+        border-radius: 11.5px;
+        background-color: $new-ot-blue;
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+        color: $white;
+      }
+    }
+
+    &__alerts {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+    }
+
+    &__export {
+      font: {
+        size: 12px;
+        weight: 500;
+      }
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: right;
+      color: $new-ot-blue;
+    }
+
+    &__chart {
+      margin-top: 27px;
+    }
+
+    &__line {
+      &__row {
+        display: flex;
+        align-items: top;
+        padding: 9px 0 7px 0;
+
+        &:not(:last-child) {
+          border-bottom: solid 2px #b4bec5;
+        }
+      }
+
+      &__value {
+        @include Level-3-Left;
+        margin-right: 16px;
+        min-width: 30px;
+      }
+
+      &__type {
+        @include Body-p-light;
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+    }
+
+    &__address {
+      margin-top: 10px;
+      @include Body-p-default;
+    }
+
+    &__url {
+      margin-top: 6px;
+      @include Body-Default-Link;
+    }
+
+    .dashboard__tile__hoverbox {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: transparentize($ot-indigo, 0.2);
+
+      .v-btn {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: normal;
+        letter-spacing: -0.18px;
+        color: $new-ot-blue;
+        width: 145px;
+
+        &.dashboard__tile__hoverbox__long-button {
+          width: 209px;
+        }
+      }
+    }
+
+    &:hover .dashboard__tile__hoverbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__tabs__toolbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &--desktop {
+      @include up-to(720px) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include up-to(720px) {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 16px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &__icon {
+      &:not(.dashboard__tabs__toolbar__icon--active) {
+        color: $ot-steel;
+      }
+
+      &--active.v-icon {
+        color: $ot-purple;
+      }
+    }
+  }
+
+  .v-window-item {
+    padding: 36px 0;
+  }
+
+  .theme--light.v-tabs-items {
+    background-color: inherit;
+  }
+}

@@ -1,0 +1,9 @@
+
+.section-divider {
+  @include Level-X-Capped;
+  width: 100%;
+  margin-bottom: 24px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #b4bec5;
+  text-transform: uppercase;
+}

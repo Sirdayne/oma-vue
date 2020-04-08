@@ -1,0 +1,62 @@
+
+.mct .org-reg {
+  &__header {
+    @include Level-1-Left;
+
+    & + .notification {
+      margin-top: 32px;
+    }
+  }
+
+  &__block {
+    margin-top: 32px;
+    padding: 40px;
+    background-color: $white;
+
+    &__header {
+      @include Level-X-Capped;
+      margin-bottom: 32.5px;
+      padding-bottom: 8.5px;
+      border-bottom: solid 1px #b4bec5;
+      text-transform: uppercase;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      color: $ot-navy;
+      margin-bottom: 8px;
+
+      .v-icon {
+        font-size: 16px;
+        color: $new-ot-blue;
+        margin-left: 4px;
+        margin-bottom: 2px;
+      }
+    }
+
+    input[type="text"] {
+      height: 49px;
+      width: 100%;
+      border: solid 1px #7e929f;
+      border-radius: 2px;
+      background-color: $white;
+      font-size: 14px;
+      color: $ot-navy;
+      padding: 16px;
+
+      &:disabled {
+        border: solid 1px $ot-cloud;
+        background-color: $ot-cloud;
+        opacity: 0.8;
+      }
+
+      &.input--error {
+        border: solid 2px $new-ot-red;
+        background: url('../assets/images/error_outline.svg') no-repeat;
+        background-position: calc(100% - 16px) 50%;
+      }
+    }
+  }
+}

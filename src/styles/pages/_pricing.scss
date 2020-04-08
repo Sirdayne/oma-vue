@@ -1,0 +1,149 @@
+
+.mct .pricing {
+  &__content {
+    &__blocks {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    &__block {
+      position: relative;
+      padding: 24px 40px 100px 40px;
+      outline: solid 1px #b4bec5;
+      width: calc(50% - 16px);
+
+      @include up-to(800px) {
+        padding: 24px 24px 105px 24px;
+        width: 100%;
+      }
+
+      &:not(:last-child) {
+        margin-right: 32px;
+
+        @include up-to(800px) {
+          margin-right: 0;
+          margin-bottom: 24px;
+        }
+      }
+
+      &:hover {
+        outline: solid 4px $new-ot-blue;
+      }
+
+      &__header {
+        @include Level-1-Left-Bright;
+
+        @include up-to(800px) {
+          @include Mobile-Level-1-Left-Bright;
+        }
+      }
+
+      &__price {
+        @include Level-3-Left-Dark-Bold;
+        margin-top: 4px;
+
+        @include up-to(800px) {
+          margin-top: 8px;
+        }
+      }
+
+      &__description {
+        @include Body-p-Large;
+        margin-top: 32px;
+
+        @include up-to(800px) {
+          @include Body-p-default;
+        }
+      }
+
+      &__options {
+        border-top: solid 1px #b4bec5;
+        padding-top: 32px;
+        margin-top: 26px;
+
+        &--desktop {
+          display: block;
+
+          @include up-to(800px) {
+            display: none;
+          }
+        }
+
+        &--mobile {
+          display: none;
+
+          @include up-to(800px) {
+            display: block;
+          }
+
+          .v-expansion-panel {
+            border: none;
+          }
+
+          .v-expansion-panel-content__wrap {
+            padding: 0;
+            background-color: #ffffff;
+          }
+
+          .v-expansion-panel-header {
+            @include Body-Default-Link;
+            padding: 0;
+            min-height: auto;
+
+            & > :not(.v-expansion-panel-header__icon) {
+              flex: none;
+            }
+
+            img {
+              width: 22px;
+              height: 22px;
+              margin-right: 8px;
+            }
+          }
+        }
+
+        &__title {
+          @include Level-X-Capped;
+          text-transform: uppercase;
+        }
+
+        &__items {
+          @include Body-p-default;
+          margin-top: 8px;
+
+          div {
+            margin-bottom: 26px;
+          }
+        }
+      }
+
+      &__notes {
+        @include Body-p-small;
+        margin-top: 46px;
+
+        @include up-to(800px) {
+          margin-top: 24px;
+          margin-bottom: -24px;
+        }
+      }
+
+      &__button {
+        position: absolute;
+        bottom: 37px;
+        left: 40px;
+        right: 40px;
+
+        .v-btn:not(.v-btn--round).v-size--default {
+          height: 41px;
+        }
+
+        @include up-to(800px) {
+          bottom: 24px;
+          left: 24px;
+          right: 24px;
+        }
+      }
+    }
+  }
+}

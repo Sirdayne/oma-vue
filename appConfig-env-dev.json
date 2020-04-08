@@ -1,0 +1,3 @@
+{
+	"contentSecurityPolicy": "default-src 'self' https://*.typekit.net https://api-ent-dev.np.covapp.io https://apistg.np.covapp.io https://apistgdev.np.covapp.io https://s-ma-dev.login.stg.covapp.io https://s-ma-qa.login.stg.covapp.io; img-src * data: *; script-src 'self' https://*.typekit.net https://apistg.np.covapp.io https://apistgdev.np.covapp.io 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://*.typekit.net;"
+}

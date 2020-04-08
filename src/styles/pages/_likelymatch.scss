@@ -1,0 +1,163 @@
+
+.mct .likely-match {
+  .confidence-matching-table__title {
+    margin-bottom: 8px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    &__text {
+      max-width: 540px;
+      margin-right: 30px;
+      @include Body-p-light;
+    }
+
+    .master-card-banner {
+      flex-grow: 1;
+      max-height: 72px;
+    }
+  }
+
+  &-companies {
+    margin-top: 33px;
+    margin-bottom: -32px;
+    padding-top: 32px;
+    box-sizing: border-box;
+    background: #eee;
+
+    .page-container {
+      padding-bottom: 0;
+    }
+  }
+
+  .full-width {
+    margin-left: calc(-100vw / 2 + #{$base-content-width} / 2);
+    margin-right: calc(-100vw / 2 + #{$base-content-width} / 2);
+  }
+
+
+  .mct-form {
+    display: flex;
+    margin-bottom: 24px;
+
+    .mct-search {
+      flex-grow: 100;
+      margin-right: 30px;
+    }
+    .mct-select {
+      width: 350px;
+    }
+  }
+
+  &-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &-card {
+    position: relative;
+    width: 33%;
+    max-width: 350px;
+    margin-right: 30px;
+    margin-bottom: 24px;
+    background: #fff;
+    padding: 32px;
+    box-sizing: border-box;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    h4 {
+      @include Level-3-Left-Dark-Bold;
+      margin-bottom: 8px;
+    }
+    p {
+      @include Body-p-default;
+    }
+    a {
+      @include Body-Default-Link;
+      text-decoration: none;
+    }
+
+    &_hover {
+      display: none;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(17, 27, 88, 0.8);
+
+      .v-btn.v-btn {
+        width: 145px;
+        color: $new-ot-blue;
+      }
+    }
+
+    &:hover .likely-match-card_hover {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (max-width : $base-content-width + 32px) {
+  .mct .likely-match {
+    &__content {
+      flex-direction: column;
+      &__text {
+        max-width: none;
+        margin-right: 0;
+        margin-bottom: 24px;
+        width: 100%;
+      }
+    }
+
+    .full-width {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+
+    &-cards {
+      justify-content: space-between;
+    }
+
+    &-card {
+      max-width: none;
+      width: 49%;
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width : 800px) {
+  .mct .likely-match {
+
+    &-companies {
+      padding-top: 24px;
+    }
+
+    .mct-form {
+      flex-direction: column;
+
+      .mct-search {
+        margin-right: 0;
+        margin-bottom: 24px;
+        width: 100%;
+      }
+      .mct-select {
+        width: 100%;
+      }
+    }
+
+    &-card {
+      width: 100%;
+    }
+  }
+}

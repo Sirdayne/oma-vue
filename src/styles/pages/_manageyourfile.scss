@@ -1,0 +1,108 @@
+
+.mct .manage-your-file {
+
+  .modal__header {
+    line-height: 40px;
+    align-items: flex-start !important;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 16px 0;
+    padding: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: solid 1px $ot-steel;
+    position: relative;
+    cursor: pointer;
+
+    &.show-tooltip:hover .custom-tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:last-child {
+      margin: 16px 0 0;
+    }
+
+    &__img {
+      height: 48px;
+      width: 48px;
+      margin-right: 22px;
+    }
+
+    &__info {
+      width: calc(100% - 70px);
+
+      &__title {
+        @include Level-3-Left;
+      }
+
+      &__text {
+        @include Body-p-small-light;
+      }
+    }
+
+    &_active {
+      padding: 21px;
+      border: solid 4px $new-ot-blue;
+    }
+
+    &_disabled {
+      cursor: default;
+      padding: 24px;
+      border: solid 1px $ot-steel;
+
+      .manage-your-file-item__info__title, .manage-your-file-item__info__text { color: $ot-steel; }
+    }
+  }
+
+  &__continue {
+    width: 205px;
+  }
+
+  &__cancel {
+    width: 149px;
+  }
+}
+
+@media screen and (max-width : 480px) {
+  .mct .manage-your-file {
+
+    &-item {
+      padding: 18px;
+
+      &__img {
+        height: 43px;
+        width: 43px;
+        margin-right: 22px;
+      }
+
+      &_active {
+        padding: 15px;
+        border: solid 4px $new-ot-blue;
+      }
+
+      &_disabled {
+        cursor: default;
+        padding: 18px;
+        border: solid 1px $ot-steel;
+      }
+
+      &__info {
+
+        &__title {
+          font-size: 15px;
+        }
+
+        &__text {
+          margin-top: 5px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

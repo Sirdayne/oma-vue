@@ -1,0 +1,24 @@
+
+.mct .brieftc {
+
+  &__title {
+    @include Level-1-Left;
+    margin-bottom: 32px;
+  }
+
+  &__content {
+    @include Body-p-default;
+  }
+}
+
+@media screen and (max-width : 600px) {
+
+  .mct .brieftc {
+
+    &__content {
+      word-break: break-all;
+      overflow: hidden;
+    }
+  }
+}
+

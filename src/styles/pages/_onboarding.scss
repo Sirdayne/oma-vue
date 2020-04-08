@@ -1,0 +1,235 @@
+
+.mct .onboarding {
+  &__steps {
+    &__wrapper {
+      position: relative;
+    }
+
+    &__button {
+      position: absolute;
+      bottom: -20px;
+      left: 48px;
+
+      &--desktop {
+        @include up-to(960px) {
+          display: none;
+        }
+      }
+
+      &--mobile {
+        display: none;
+
+        @include up-to(960px) {
+          display: block;
+          position: relative;
+          bottom: auto;
+          left: auto;
+        }
+      }
+
+      .v-btn.v-size--default {
+        font-size: 18px;
+        height: 56px;
+        width: 243px;
+        letter-spacing: -0.22px;
+
+        @include up-to(960px) {
+          width: 100%;
+        }
+      }
+
+      .v-btn:not(.v-btn--round).v-size--default {
+        padding: 0 53px;
+      }
+    }
+  }
+
+  &__step {
+    position: relative;
+    width: 100%;
+    height: 624px;
+    border-radius: 10px;
+    padding: 32px 20px 32px 38px;
+    margin-top: 24px;
+    box-shadow: 0 22px 24px -10px rgba(8, 15, 59, 0.2);
+
+    @include up-to(960px) {
+      margin-top: 0;
+      padding: 0;
+      height: auto;
+    }
+
+    &-1 {
+      background: url('../assets/images/mastercard-containers.jpg') #1d1f1e no-repeat;
+      @include image-2x('../assets/images/mastercard-containers@2x.jpg', 100%, 100%);
+
+      @include up-to(960px) {
+        background: #ffffff;
+        overflow: hidden;
+      }
+
+      &__image {
+        display: none;
+        overflow: hidden;
+
+        @include up-to(960px) {
+          display: block;
+
+          img {
+            width: 100%;
+            margin-top: -18px;
+
+            @include up-to(600px) {
+              margin-top: -8px;
+            }
+          }
+        }
+      }
+
+      &__content {
+        position: absolute;
+        bottom: 86px;
+        left: 48px;
+        max-width: 440px;
+
+        @include up-to(960px) {
+          position: relative;
+          bottom: auto;
+          left: auto;
+          padding: 16px 16px 24px 16px;
+          max-width: none;
+        }
+
+        &__header {
+          font: {
+            size: 40px;
+            weight: 300;
+          }
+          letter-spacing: -0.5px;
+          color: $white;
+
+          @include up-to(960px) {
+            font-size: 32px;
+            line-height: 1.06;
+            color: $new-ot-blue;
+            margin-bottom: 8px;
+          }
+        }
+
+        &__text {
+          font-size: 16px;
+          color: $white;
+          margin-top: 4px;
+
+          @include up-to(960px) {
+            @include Body-p-default;
+            margin-bottom: 32px;
+          }
+        }
+      }
+    }
+
+    &-2 {
+      background-color: #ffffff;
+
+      &__content {
+        padding: 0 28px 0 10px;
+
+        @include up-to(960px) {
+          padding: 16px;
+        }
+
+        &__header {
+          @include Level-1-Left-Bright;
+          margin-left: -3px;
+
+          @include up-to(960px) {
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 1.06;
+            letter-spacing: -0.5px;
+            color: $new-ot-blue;
+          }
+        }
+
+        &__text {
+          @include Body-p-Large;
+
+          @include up-to(960px) {
+            @include Body-p-default;
+          }
+        }
+
+        &__header + .onboarding__step-2__content__text {
+          margin-top: 24px;
+        }
+
+        &__cols {
+          width: calc(100% + 70px);
+          margin-left: -36.5px;
+          margin-top: 40px;
+
+          @include up-to(960px) {
+            margin-top: 30px;
+          }
+
+          &__item {
+            padding: 10px 36.5px 16px;
+
+            &:not(:last-child) {
+              border-right: solid 2px #b4bec5;
+
+              .onboarding__step-2__content__cols__text {
+                @include up-to(960px) {
+                  border-bottom: 1px solid #b4bec5;
+                }
+              }
+            }
+
+            @include up-to(960px) {
+              border-right: none;
+              padding-top: 16px;
+              padding-bottom: 16px;
+            }
+          }
+
+          &__icon {
+            height: 85px;
+
+            @include up-to(960px) {
+              height: auto;
+              margin-bottom: 16px;
+            }
+          }
+
+          &__header {
+            height: 52px;
+            line-height: normal;
+            @include Level-3-Left;
+
+            @include up-to(1017px) {
+              font-size: 18px;
+            }
+
+            @include up-to(960px) {
+              font-size: 20px;
+              height: auto;
+            }
+          }
+
+          &__text {
+            height: 106px;
+            margin-top: 15px;
+            @include Body-p-default;
+
+            @include up-to(960px) {
+              height: auto;
+              margin-top: 8px;
+              padding-bottom: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

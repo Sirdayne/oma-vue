@@ -1,0 +1,266 @@
+
+.mct .upload-master-list {
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 56px;
+
+    h4 {
+      @include Level-1-Left-Bright;
+    }
+
+    .v-icon {
+      height: 26px;
+      width: 26px;
+      font-size: 26px;
+    }
+  }
+
+  &__hr {
+    border-top: 1px solid #b4bec5;
+    margin-bottom: 32.5px;
+  }
+
+  .upload-master-list-file {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &__name {
+      @include Mono-Left;
+      padding-top: 23px;
+      margin-bottom: 5px;
+    }
+
+    &__remove {
+      @include Body-small-link;
+      cursor: pointer;
+    }
+  }
+
+  &__dnd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 404px;
+    border: dashed 2px rgba(126, 146, 159, .5);
+    margin-bottom: 32px;
+
+    &__container {
+      text-align: center;
+      &__img {
+        margin-bottom: 8px;
+        width: 100px;
+        height: 135px;
+      }
+      &__text {
+        color: $ot-purple;
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom: 27px;
+      }
+    }
+    .custom-file-upload {
+      border: 1px solid $new-ot-blue;
+      color: $new-ot-blue;
+      display: inline-block;
+      padding: 0px 47px;
+      line-height: 41px;
+      height: 41px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: bold;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: .2s linear;
+      &:hover {
+        background: rgba(0, 0, 0, .03);
+      }
+    }
+    input[type="file"] {
+      display: none;
+    }
+  }
+
+  &__cancel {
+    display: flex;
+    justify-content: flex-end;
+    @include Body-Default-Link;
+  }
+
+  &__step {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-1 {
+      margin-bottom: 48.5px;
+    }
+    &-2 {
+      margin-bottom: 32px;
+      &__hint {
+        @include Body-p-small-light;
+        margin-top: 8px;
+      }
+    }
+
+    h4 {
+      @include Level-X-Capped;
+      margin-bottom: 2px;
+      text-transform: uppercase;
+    }
+
+    p {
+      @include Level-3-Left;
+      margin-bottom: 0;
+    }
+
+    .v-btn.v-btn {
+      padding: 0 33px;
+      height: 41px;
+    }
+
+    &__button a {
+      text-decoration: none;
+    }
+
+    &__icon {
+      height: 53px;
+      width: 57px;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      border-radius: 10px;
+      border: solid 1px #b4bec5;
+      box-sizing: border-box;
+      padding: 57px 10px;
+    }
+
+    &__block {
+      width: 25%;
+      padding: 8px 36.5px;
+
+      &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+        border-left: solid 1px #b4bec5;
+      }
+
+      &__icon {
+        width: 70px;
+        height: 52px;
+        margin-bottom: 28px;
+      }
+
+      h5 {
+        @include Level-3-Left;
+        margin-bottom: 16px;
+        font-weight: normal;
+      }
+
+      p {
+        @include Body-p-default;
+      }
+    }
+  }
+}
+
+@media screen and (max-width : 1024px) {
+
+  .mct .upload-master-list {
+
+    &__step {
+
+      &__container {
+        flex-direction: column;
+        padding: 24px;
+      }
+
+      &__block {
+
+        width: 100%;
+
+        &:nth-child(1) {
+          padding: 0 0 20px 0;
+          border-left: none;
+          border-bottom: solid 1px #b4bec5;
+        }
+
+        &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+          padding: 20px 0;
+          border-left: none;
+          border-bottom: solid 1px #b4bec5;
+        }
+
+        &__icon {
+          margin-bottom: 12px;
+        }
+
+        h5 {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width : 720px) {
+
+  .mct .upload-master-list {
+    padding: 0 8px;
+
+    &__title {
+
+      margin-bottom: 20px;
+
+      h4{
+        font-size: 32px;
+      }
+
+    }
+
+    &__step {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 24px;
+
+      &__button {
+        margin-top: 15px;
+      }
+
+      &__icon {
+        margin-top: 15px;
+      }
+    }
+
+    &__hr {
+      margin-bottom: 24px;
+    }
+
+    &__dnd {
+      margin-bottom: 24px;
+      height: 304px;
+
+      &__container {
+
+        &__img {
+          width: 80px;
+          height: 115px;
+        }
+      }
+    }
+
+    .upload-master-list-file {
+      align-items: flex-start;
+
+      &__name {
+        padding-top: 0;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

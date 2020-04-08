@@ -1,0 +1,61 @@
+
+.master-card-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 8px 14px 16px;
+  background: #eee;
+  cursor: pointer;
+
+  &-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    position: relative;
+    width: 38px;
+    height: 23px;
+    margin-right: 13px;
+    &__red {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 23px;
+      height: 23px;
+      background-color: #eb001b;
+      opacity: .9;
+      border-radius: 50%;
+    }
+    &__orange {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      width: 23px;
+      height: 23px;
+      background-color: #f79e1b;
+      opacity: .9;
+      border-radius: 50%;
+    }
+  }
+  &__text {
+    @include Body-p-default-bold;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width : 600px) {
+  .master-card-banner {
+    &-container {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
+

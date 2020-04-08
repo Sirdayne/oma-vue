@@ -1,0 +1,41 @@
+
+$header-height--desktop: 87px;
+$header-height--mobile: 70px;
+
+.header {
+  background-color: $white;
+  width: 100%;
+
+  &__container {
+    @include container;
+    height: $header-height--desktop;
+
+    @include up-to(960px) {
+      height: $header-height--mobile;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  &__opentext-logo {
+    display: block;
+    width: 269px;
+    height: 41px;
+
+    @include up-to(960px) {
+      width: 152px;
+      height: 25px;
+    }
+  }
+
+  &__mastercard-logo {
+    display: block;
+    width: 113px;
+    height: 37px;
+
+    @include up-to(960px) {
+      width: 92px;
+      height: 30px;
+    }
+  }
+}

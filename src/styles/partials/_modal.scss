@@ -1,0 +1,145 @@
+
+.mct {
+  .v-overlay--active .v-overlay__scrim {
+    // Vuetify use inline style for this, so... it's important :(
+    opacity: 0.8 !important;
+    background-color: $ot-navy !important;
+  }
+
+  .v-dialog {
+    border-radius: 10px;
+
+    & > .v-card {
+      & > .v-card__title {
+        padding: 48px 80px 24px;
+        @include Level-1-Left-Bright;
+      }
+
+      & > .v-card__text {
+        padding: 0 80px;
+        line-height: 20px;
+        @include Body-p-default;
+      }
+
+      & > .v-card__actions {
+        padding: 40px 80px 56px;
+      }
+    }
+
+    & > .v-card.settings__modal {
+      & > .v-card__text {
+        padding-top: 15px;
+        @include Body-p-Large;
+      }
+
+      & > .v-card__actions {
+        padding: 25px 80px 56px;
+      }
+    }
+  }
+}
+
+.modal__header {
+  width: 100%;
+
+  &__icon {
+    .theme--light.v-icon {
+      color: $ot-steel;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mct {
+    & .v-dialog {
+      border-radius: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      max-height: none;
+
+      &:not(.v-dialog--fullscreen) {
+        max-height: none;
+      }
+
+      & > .v-card {
+        min-height: 100%;
+        border-radius: 0;
+
+        & > .v-card__title {
+          padding: 32px 24px;
+          font-size: 32px;
+        }
+
+        & > .v-card__text {
+          min-height: calc(100% - 250px);
+          padding: 0 24px;
+        }
+
+        & > .v-card__actions {
+          padding: 0 24px;
+          flex-direction: column;
+
+          & .v-btn.v-btn {
+            margin: 16px 0 0 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// styles for mobile navigation and search modal
+.modal-nav {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: $white;
+  display: none;
+  z-index: 999;
+  padding: 32px 24px;
+
+  @include up-to(960px) {
+    display: block;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__text {
+      font: {
+        size: 32px;
+        weight: 300;
+      }
+      line-height: 1.06;
+      letter-spacing: -0.5px;
+      color: $new-ot-blue;
+    }
+
+    &__icon .theme--light.v-icon {
+      font-size: 26px;
+      color: $ot-steel;
+    }
+  }
+
+  &__content {
+    margin-top: 94px;
+
+    .input {
+      margin-bottom: 24px;
+    }
+
+    .v-btn {
+      width: 100%;
+    }
+  }
+}
+// /styles for mobile navigation and search modal
